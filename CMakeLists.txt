@@ -46,3 +46,11 @@ target_link_libraries(gSLICr_lib ${CUDA_LIBRARY})
 
 add_executable(demo demo.cpp)
 target_link_libraries(demo gSLICr_lib ${OpenCV_LIBS})
+
+INSTALL(TARGETS gSLICr_lib DESTINATION /usr/local/lib)
+
+INSTALL(DIRECTORY gSLICr_Lib
+  DESTINATION include)
+
+INSTALL(DIRECTORY ORUtils
+  DESTINATION include)
